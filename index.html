@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Clone Jutsu Cam</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <h1>Shadow Clone Jutsu Camera</h1>
+    <p class="subtitle">Show a hand sign similar to Naruto's shadow clone symbol and clones appear after smoke.</p>
+
+    <div class="stage">
+      <video id="cameraInput" playsinline muted></video>
+      <canvas id="effectCanvas"></canvas>
+      <div id="statusPill" class="status-pill">Starting camera…</div>
+    </div>
+
+    <section class="controls">
+      <label>
+        Clone count
+        <input id="cloneCount" type="range" min="2" max="6" value="4" />
+      </label>
+      <span id="cloneCountLabel">4</span>
+    </section>
+
+    <details>
+      <summary>Gesture tips</summary>
+      <ul>
+        <li>Try placing both hands near the center of the frame.</li>
+        <li>Keep your wrists close together, palms mostly vertical.</li>
+        <li>Curl most fingers while keeping index fingers relatively upright.</li>
+      </ul>
+    </details>
+  </main>
+</body>
+</html>
